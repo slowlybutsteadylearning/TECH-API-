@@ -27,16 +27,23 @@ Admin must be able to:
 
 users
 
-- `POST` https://lsgr.herokuapp.com/api/v1/signup:
-- `POST` https://lsgr.herokuapp.com/api/v1/login
-- `POST` https://lsgr.herokuapp.com/api/v1/booking
-- `PUT` https://lsgr.herokuapp.com/api/v1/update/:id
-- `DELETE` https://lsgr.herokuapp.com/api/v1/delete/:id
-- `GET` https://lsgr.herokuapp.com/api/v1/trains?
+- `POST` https://techhub.herokuapp.com//signup:
+- `POST` https://techhub.herokuapp.com/login
+- `GET` https://techhub.herokuapp.com//services
+- `GET` https://techhub.herokuapp.com/courses
+- `GET` https://techhub.herokuapp.com/register
+- `PUT` https://techhub.herokuapp.com/update
+- `GET` https://techhub.herokuapp.com/bookings
   admin
-- `GET` https://lsgr.herokuapp.com/api/v1/all
-- `POST` https://lsgr.herokuapp.com/api/v1/upload
-- `GET` https://lsgr.herokuapp.com/api/v1/allbookings
+- `POST` https://techhub.herokuapp.com/api/signup
+- `POST` https://techhub.herokuapp.com/api/login
+- `P0ST` https://techhub.herokuapp.com/api/course
+- `P0ST` https://techhub.herokuapp.com/api/upload
+- `P0ST` https://techhub.herokuapp.com/api/upload
+- `P0ST` https://techhub.herokuapp.com/api/registrations
+- `GET` https://techhub.herokuapp.com/api/totalcount
+- `PUT` https://techhub.herokuapp.com/api/users/:id
+- `GET` https://techhub.herokuapp.com/api/sum
 
 # How to use this project
 
