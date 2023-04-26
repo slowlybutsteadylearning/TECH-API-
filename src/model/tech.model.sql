@@ -19,18 +19,21 @@ CREATE TABLE registrations (
   id INT PRIMARY KEY AUTO_INCREMENT,
   user_id INT NOT NULL,
   course_id INT NOT NULL,
-
+  amount DECIMAL(10, 2) DEFAULT 0,
   approved BOOLEAN NOT NULL DEFAULT false,
+  FOREIGN KEY (user_id) REFERENCES users(id),
   FOREIGN KEY (course_id) REFERENCES courses(id)
 );
 
 CREATE TABLE bookings (
-  id INT PRIMARY KEY AUTO_INCREMENT,
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   user_id INT NOT NULL,
-  space_id INT NOT NULL,
+  start_time DATETIME NOT NULL,
+  end_time DATETIME NOT NULL,
   date DATE NOT NULL,
-  FOREIGN KEY (user_id) REFERENCES users(id),
-  FOREIGN KEY (space_id) REFERENCES spaces(id)
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) 
 );
 
 

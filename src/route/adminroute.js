@@ -1,7 +1,7 @@
 const router =require("express").Router();
 
 const { createANewAdmin, adminLogin, createANewCourse, uploadNewService } = require("../controller/admin.controller");
-const { getAllRegistered, getTotalRegistration } = require("../controller/registration.controller");
+const { getAllRegistered, getTotalRegistration, userApproved, totalAmount } = require("../controller/registration.controller");
 const auth = require("../middleware/auth");
 const roleBasedAccess = require("../middleware/rbca");
 const { validateRequest, schemas } = require("../utils/validator");
@@ -14,4 +14,6 @@ router.post("/course",auth, roleBasedAccess(["admin"]),validateRequest(schemas.c
 router.post("/upload",auth, roleBasedAccess(["admin"]), uploadNewService)
 router.get("/registrations",auth, roleBasedAccess(["admin"]), getAllRegistered)
 router.get("/totalcount",auth, roleBasedAccess(["admin"]), getTotalRegistration)
+router.put("/users/:id",auth, roleBasedAccess(["admin"]), userApproved)
+router.get("/sum",auth, roleBasedAccess(["admin"]),totalAmount)
 module.exports= router;

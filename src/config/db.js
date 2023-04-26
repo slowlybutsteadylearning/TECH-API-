@@ -1,4 +1,4 @@
-const { configService } = require("../config/config");
+const { configService } = require("./config");
 const mysql = require("mysql2");
 const logger = require("../log/logger");
 
